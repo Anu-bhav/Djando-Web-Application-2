@@ -1,3 +1,32 @@
 to install pipenv in current directory
-    export PIPENV_VENV_IN_PROJECT="enabled"
-    pipenv install django
+    $ export PIPENV_VENV_IN_PROJECT="enabled"
+    $ pipenv install django
+
+the .venv folder and Pipfile will be created after the install
+    $ pipenv shell
+    $ pip freeze
+    asgiref==3.2.3
+    Django==3.0.3  
+    pytz==2019.3   
+    sqlparse==0.3.0
+
+getting started with django
+    $ django-admin
+    django-admin startproject trydjango .
+
+sync app and database
+    $ python manage.py migrate
+
+create a super user
+    $ python manage.py createsuperuser
+
+create an app, and manually add to the settings.py
+    $ python manage.py startapp products
+
+create Product class in products/models.py
+    $ python manage.py makemigrations
+    $ python manage.py migrate
+
+add Product class to products/admin.py
+    admin.site.register(Product)
+
